@@ -1647,7 +1647,7 @@
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="574" parent="571" name="product_nam">
+    <column id="574" parent="571" name="product_name">
       <DasType>varchar(30)|0s</DasType>
       <Position>2</Position>
     </column>

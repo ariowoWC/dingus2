@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import sqlite3
 from sqlite3 import Error
 
-DATABASE = "coffee_database"
+DATABASE = "C:/Users/22240/OneDrive - Wellington College/Documents/Smile (67)/coffee_database"
 
 app = Flask(__name__)
 
@@ -25,10 +25,13 @@ def render_homepage():
 @app.route('/menu')
 def render_menu_page():
     con = connect_database(DATABASE)
-    query = "SELECT name, description, volume, image, price FROM product_db"
+    query = "SELECT product_name, product_description, product_volume, product_image, product_price FROM product_db"
     cur = con.cursor()
     cur.execute(query)
-    return render_template('menu.html')
+    product_list = cur.fetchall()
+    print(product_list)
+    con.close()
+    return render_template('menu.html', coffee_list=product_list)
 
 
 @app.route('/contact')
