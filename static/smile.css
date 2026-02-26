@@ -96,8 +96,9 @@ a, a:visited {
 .product-box {
     /*width: 13vw;*/
     width: 32%;
+    height: 700px;
     /*float: left;*/
-    /*display: table-cell;*/
+    display: table-cell;
     /*padding: 0.5rem;*/
     /*margin: 1vw;*/
     border: 1px solid rgba(189, 195, 199, 1.0);
@@ -112,6 +113,12 @@ a, a:visited {
 .product-box-image {
     height: 150px;
     overflow: hidden;
+}
+
+.description-box-info {
+    padding: 0.5rem;
+    height: 90px;
+
 }
 
 .product-box-info {

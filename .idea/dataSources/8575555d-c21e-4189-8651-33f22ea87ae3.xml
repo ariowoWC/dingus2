@@ -1639,57 +1639,80 @@
     <argument id="570" parent="195">
       <Position>1</Position>
     </argument>
-    <table id="571" parent="196" name="product_db"/>
-    <table id="572" parent="196" name="sqlite_master">
+    <table id="571" parent="196" name="categories"/>
+    <table id="572" parent="196" name="product_db"/>
+    <table id="573" parent="196" name="sqlite_master">
       <System>1</System>
     </table>
-    <column id="573" parent="571" name="product_id">
+    <table id="574" parent="196" name="sqlite_sequence">
+      <System>1</System>
+    </table>
+    <column id="575" parent="571" name="cat_name">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="576" parent="571" name="cat_id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>integer|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <key id="577" parent="571" name="categories_pk">
+      <ColNames>cat_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="578" parent="572" name="product_id">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="574" parent="571" name="product_name">
+    <column id="579" parent="572" name="product_name">
       <DasType>varchar(30)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="575" parent="571" name="product_description">
+    <column id="580" parent="572" name="product_description">
       <DasType>varchar(300)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="576" parent="571" name="product_volume">
+    <column id="581" parent="572" name="product_volume">
       <DasType>char(6)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="577" parent="571" name="product_image">
+    <column id="582" parent="572" name="product_image">
       <DasType>varchar(30)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="578" parent="571" name="product_price">
+    <column id="583" parent="572" name="product_price">
       <DasType>float|0s</DasType>
       <Position>6</Position>
     </column>
-    <key id="579" parent="571">
+    <key id="584" parent="572">
       <ColNames>product_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="580" parent="572" name="type">
+    <column id="585" parent="573" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="581" parent="572" name="name">
+    <column id="586" parent="573" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="582" parent="572" name="tbl_name">
+    <column id="587" parent="573" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="583" parent="572" name="rootpage">
+    <column id="588" parent="573" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="584" parent="572" name="sql">
+    <column id="589" parent="573" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
+    </column>
+    <column id="590" parent="574" name="name">
+      <Position>1</Position>
+    </column>
+    <column id="591" parent="574" name="seq">
+      <Position>2</Position>
     </column>
   </database-model>
 </dataSource>
