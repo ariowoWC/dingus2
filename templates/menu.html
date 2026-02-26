@@ -5,8 +5,16 @@ menu
 {% endblock %}
 
 {% block main %}
+    <div class="products">
     {% for product_id in coffee_list %}
-        <h3> {{ product_id[0] }} </h3>
+        <div class="product-box">
+        <h3 class="product-box-heading"> {{ product_id[0] }} </h3>
+        <p class="product-box-info"> {{ product_id[1] }}</p>
+        <img src="static/images/{{ product_id[3] }}.jpg">
+        <p class="product-box-info">Price: ${{ product_id[4] }}0</p>
+        <p class="product-box-info">Volume: {{ product_id[2] }}ml</p>
+        </div>
     {% endfor %}
+    </div>
 
 {% endblock %}
