@@ -1684,34 +1684,43 @@
       <DasType>float|0s</DasType>
       <Position>6</Position>
     </column>
-    <key id="584" parent="572">
+    <column id="584" parent="572" name="category_fk">
+      <DasType>integer|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <foreign-key id="585" parent="572" name="product_db_categories_cat_id_fk">
+      <ColNames>category_fk</ColNames>
+      <RefColNames>cat_id</RefColNames>
+      <RefTableName>categories</RefTableName>
+    </foreign-key>
+    <key id="586" parent="572">
       <ColNames>product_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="585" parent="573" name="type">
+    <column id="587" parent="573" name="type">
       <DasType>TEXT|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="586" parent="573" name="name">
+    <column id="588" parent="573" name="name">
       <DasType>TEXT|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="587" parent="573" name="tbl_name">
+    <column id="589" parent="573" name="tbl_name">
       <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="588" parent="573" name="rootpage">
+    <column id="590" parent="573" name="rootpage">
       <DasType>INT|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="589" parent="573" name="sql">
+    <column id="591" parent="573" name="sql">
       <DasType>TEXT|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="590" parent="574" name="name">
+    <column id="592" parent="574" name="name">
       <Position>1</Position>
     </column>
-    <column id="591" parent="574" name="seq">
+    <column id="593" parent="574" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

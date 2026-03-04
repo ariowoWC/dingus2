@@ -25,7 +25,7 @@ def render_homepage():
 @app.route('/menu/<cat_id>')
 def render_menu_page(cat_id):
     con = connect_database(DATABASE)
-    query = "SELECT product_name, product_description, product_volume, product_image, product_price FROM product_db WHERE cat_id=1"
+    query = "SELECT product_name, product_description, product_volume, product_image, product_price FROM product_db WHERE category_fk=1"
     cur = con.cursor()
     cur.execute(query)
     product_list = cur.fetchall()
@@ -37,7 +37,6 @@ def render_menu_page(cat_id):
 @app.route('/contact')
 def render_contact_page():
     return render_template('contact.html')
-
 
 
 app.run(host='0.0.0.0', debug=True)
